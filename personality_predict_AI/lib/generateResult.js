@@ -4,7 +4,6 @@ dotenv.config();
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 const API_KEY = process.env.GOOGLE_API_KEY;
-console.log(API_KEY); // API 키 확인
 const genAI = new GoogleGenerativeAI(API_KEY);
 
 const modelName = "gemini-1.5-flash-latest"; // 모델 이름 설정
