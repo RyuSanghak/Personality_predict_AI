@@ -152,16 +152,17 @@ export default function Home() {
     const currentQuestion = questions[currentQuestionIndex];
 
     return (
-      <main className="flex min-h-screen items-center justify-center bg-gray-100 p-4">
-        <Card className="w-[500px] h-[440px]">
-          <CardHeader>
+      <main className="relative flex min-h-screen items-center justify-center bg-gray-100 p-4">
+
+        <Card className="relative w-[400px] h-[500px] overflow-hidden">
+          <CardHeader >
             <div>
-              <CardContent className="flex flex-col space-y-4">
+              <CardContent className="flex justify-center items-center flex-col space-y-4">
                 <div>Question {currentQuestionIndex + 1}</div>
                 <div>{currentQuestion.question}</div>
                 <hr className="my-2" /> {/* Horizontal line */}
                 <Toggle
-                  className="w-[400px] h-[50px]"
+                  className="w-[300px] h-[60px]"
                   variant="outline"
                   aria-label="Choice 1"
                   pressed={selectedChoices[currentQuestionIndex] === 'c1'}
@@ -170,7 +171,7 @@ export default function Home() {
                   {currentQuestion.c1}
                 </Toggle>
                 <Toggle
-                  className="w-[400px] h-[50px]"
+                  className="w-[300px] h-[60px]"
                   variant="outline"
                   aria-label="Choice 2"
                   pressed={selectedChoices[currentQuestionIndex] === 'c2'}
@@ -179,7 +180,7 @@ export default function Home() {
                   {currentQuestion.c2}
                 </Toggle>
                 <Toggle
-                  className="w-[400px] h-[50px]"
+                  className="w-[300px] h-[60px]"
                   variant="outline"
                   aria-label="Choice 3"
                   pressed={selectedChoices[currentQuestionIndex] === 'c3'}
@@ -244,17 +245,7 @@ export default function Home() {
   );
 }
 
-export function alerts() {
-  return (
-    <Alert variant="destructive">
-      <AlertCircle className="h-4 w-4" />
-      <AlertTitle>Error</AlertTitle>
-      <AlertDescription>
-        Your session has expired. Please log in again.
-      </AlertDescription>
-    </Alert>
-  )
-}
+
 
 export function CheckboxWithText() {
   return (
