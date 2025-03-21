@@ -205,12 +205,14 @@ export default function Home() {
     return (
       <motion.div layout transition={{ duration: 1.0 }}>
         <main className="flex min-h-screen items-center justify-center bg-gray-100 p-4">
-          <Card className="w-[500px] h-[1000px]">
+          <Card className="w-[400px] h-[800px]">
             <CardHeader>
               <CardTitle className="text-2xl">AI 성격 테스트 결과</CardTitle>
             </CardHeader>
             <CardContent>
-              <div style={{ whiteSpace: "pre-wrap" }}>{resultResponse.data}</div>
+              <div className="max-h-[600px] overflow-y-auto" style={{ whiteSpace: "pre-wrap" }}>
+                {resultResponse.data}
+              </div>
 
             </CardContent>
             <CardFooter className="flex justify-center">
