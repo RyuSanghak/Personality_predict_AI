@@ -227,12 +227,6 @@ export default function Home() {
 
   else return (
     <motion.div layout transition={{ duration: 1.0 }}>
-      <Head>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3197995518950635"
-          crossorigin="anonymous">
-
-        </script>
-      </Head>
       <main className="flex min-h-screen items-center justify-center bg-gray-100 p-4">
         <Card className="w-[500px] h-[700px]">
           <CardHeader>
